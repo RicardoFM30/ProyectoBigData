@@ -1,0 +1,5 @@
+{
+    "git.sshCommand": "ssh -i ~/.ssh/id_ed25519 -F /dev/null",
+    "git.enableCommitSigning": false,
+    "git.defaultCloneDirectory": "/mnt/c/Users/Ric/Desktop/Proyecto Big Data"
+}
