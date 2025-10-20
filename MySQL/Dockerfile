@@ -12,4 +12,4 @@ ENV MYSQL_DATABASE=proyecto
 COPY ./init.sql /docker-entrypoint-initdb.d/
 
 # Expone el puerto por defecto
-EXPOSE 3306
+EXPOSE 3310
