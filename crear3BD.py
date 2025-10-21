@@ -64,16 +64,16 @@ def ejecutar_script_postgres(sql_text, user, password, host="localhost", port=54
 if __name__ == "__main__":
     base_path = os.path.dirname(os.path.abspath(__file__))
 
-    print("🚀 Creando bases de datos desde los init.sql...")
+    print("Creando bases de datos desde los init.sql...")
 
     # --- MySQL ---
     try:
         print("\n🔹 MySQL:")
         sql_mysql = leer_sql(os.path.join(base_path, "mysql", "init.sql"))
         ejecutar_script_mysql(sql_mysql, "localhost", 3306, "root", "admin123")
-        print("✅ Base de datos MySQL creada correctamente.")
+        print("Base de datos MySQL creada correctamente.")
     except Exception as e:
-        print(f"❌ Error en MySQL: {e}")
+        print(f"Error en MySQL: {e}")
 
     # --- MariaDB ---
     try:
@@ -82,17 +82,17 @@ if __name__ == "__main__":
         # Forzar collation compatible con MariaDB
         sql_maria = sql_maria.replace("utf8mb4_0900_ai_ci", "utf8mb4_general_ci")
         ejecutar_script_mysql(sql_maria, "localhost", 3307, "usuario", "usuario123")
-        print("✅ Base de datos MariaDB creada correctamente.")
+        print("Base de datos MariaDB creada correctamente.")
     except Exception as e:
-        print(f"❌ Error en MariaDB: {e}")
+        print(f"Error en MariaDB: {e}")
 
     # --- PostgreSQL ---
     try:
         print("\n🔹 PostgreSQL:")
         sql_pg = leer_sql(os.path.join(base_path, "postgres", "init.sql"))
         ejecutar_script_postgres(sql_pg, "usuario", "usuario123")
-        print("✅ Base de datos PostgreSQL creada correctamente.")
+        print("Base de datos PostgreSQL creada correctamente.")
     except Exception as e:
-        print(f"❌ Error en PostgreSQL: {e}")
+        print(f"Error en PostgreSQL: {e}")
 
-    print("\n🎉 Todas las bases de datos creadas correctamente.")
+    print("\nTodas las bases de datos creadas correctamente.")

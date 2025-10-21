@@ -1,6 +1,6 @@
 """
 Script para rellenar las bases de datos MySQL, PostgreSQL y MariaDB con datos falsos usando Faker.
-Se usan **10 providers** distintos de Faker:
+Los providers empleados son los siguientes
 
 1. faker.name()           → nombres de estudiantes/profesores
 2. faker.last_name()      → apellidos
@@ -247,7 +247,7 @@ def poblar(cursor, conexion):
     insertar_retroalimentaciones(cursor)
     insertar_recomendaciones(cursor)
     conexion.commit()
-    print("Datos insertados correctamente ✅")
+    print("Datos insertados correctamente")
 
 print("Rellenando MySQL...")
 poblar(cursor_mysql, conn_mysql)
@@ -266,4 +266,4 @@ conn_maria.close()
 cursor_pg.close()
 conn_pg.close()
 
-print("✅ Bases de datos rellenadas con datos falsos.")
+print("Bases de datos rellenadas con datos falsos.")

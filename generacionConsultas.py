@@ -142,4 +142,4 @@ conn_maria.close()
 cursor_pg.close()
 conn_pg.close()
 
-print("✅ JSON generados correctamente para MySQL, MariaDB y PostgreSQL.")
+print("JSON generados correctamente para MySQL, MariaDB y PostgreSQL.")
