@@ -1,6 +1,4 @@
--- ==========================================
--- CREACIÓN DE BASE DE DATOS Y TABLAS: PROYECTO (MariaDB)
--- ==========================================
+-- Script creación base de datos MariaDB --
 
 DROP DATABASE IF EXISTS proyecto;
 CREATE DATABASE proyecto 

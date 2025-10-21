@@ -1,9 +1,5 @@
--- ========================================
--- Script de creación de base de datos PostgreSQL
--- Proyecto Instituto (DER simplificado)
--- ========================================
+-- Script creación base de datos Postgres --
 
--- Eliminar tablas en orden inverso a sus dependencias
 DROP TABLE IF EXISTS Recomendaciones;
 DROP TABLE IF EXISTS Retroalimentaciones;
 DROP TABLE IF EXISTS PerfilesTalento;
@@ -17,7 +13,6 @@ DROP TABLE IF EXISTS Asignaturas;
 DROP TABLE IF EXISTS Profesores;
 DROP TABLE IF EXISTS Estudiantes;
 
--- Crear tablas
 CREATE TABLE Estudiantes (
   id_estudiante SERIAL PRIMARY KEY,
   nombre VARCHAR(100),

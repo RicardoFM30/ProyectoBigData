@@ -1,24 +1,12 @@
--- ==========================================
--- CREACIÓN DE BASE DE DATOS Y TABLAS: PROYECTO
--- Compatible MySQL / MariaDB
--- ==========================================
+-- Script creación base de datos MySQL --
 
--- Elimina la base de datos si existía
 DROP DATABASE IF EXISTS proyecto;
-
--- Crea la base de datos con charset y collation compatible con MariaDB
 CREATE DATABASE proyecto 
 CHARACTER SET utf8mb4 
 COLLATE utf8mb4_general_ci;
 
--- Usa la base de datos recién creada
 USE proyecto;
 
--- =====================================================
--- TABLAS
--- =====================================================
-
--- Estudiantes
 DROP TABLE IF EXISTS Estudiantes;
 CREATE TABLE Estudiantes (
     id_estudiante INT PRIMARY KEY AUTO_INCREMENT,
@@ -31,7 +19,6 @@ CREATE TABLE Estudiantes (
     telefono VARCHAR(20)
 );
 
--- Profesores
 DROP TABLE IF EXISTS Profesores;
 CREATE TABLE Profesores (
     id_profesor INT PRIMARY KEY AUTO_INCREMENT,
@@ -42,7 +29,6 @@ CREATE TABLE Profesores (
     materia VARCHAR(100)
 );
 
--- Asignaturas
 DROP TABLE IF EXISTS Asignaturas;
 CREATE TABLE Asignaturas (
     id_asignatura INT PRIMARY KEY AUTO_INCREMENT,
@@ -53,7 +39,6 @@ CREATE TABLE Asignaturas (
     FOREIGN KEY (id_profesor) REFERENCES Profesores(id_profesor)
 );
 
--- Calificaciones
 DROP TABLE IF EXISTS Calificaciones;
 CREATE TABLE Calificaciones (
     id_calificacion INT PRIMARY KEY AUTO_INCREMENT,
@@ -66,7 +51,6 @@ CREATE TABLE Calificaciones (
     FOREIGN KEY (id_asignatura) REFERENCES Asignaturas(id_asignatura)
 );
 
--- Habilidades Blandas
 DROP TABLE IF EXISTS HabilidadesBlandas;
 CREATE TABLE HabilidadesBlandas (
     id_habilidad INT PRIMARY KEY AUTO_INCREMENT,
@@ -77,7 +61,6 @@ CREATE TABLE HabilidadesBlandas (
     FOREIGN KEY (id_estudiante) REFERENCES Estudiantes(id_estudiante)
 );
 
--- Actividades
 DROP TABLE IF EXISTS Actividades;
 CREATE TABLE Actividades (
     id_actividad INT PRIMARY KEY AUTO_INCREMENT,
@@ -88,7 +71,6 @@ CREATE TABLE Actividades (
     descripcion TEXT
 );
 
--- Participaciones
 DROP TABLE IF EXISTS Participaciones;
 CREATE TABLE Participaciones (
     id_participacion INT PRIMARY KEY AUTO_INCREMENT,
@@ -102,7 +84,6 @@ CREATE TABLE Participaciones (
     FOREIGN KEY (id_actividad) REFERENCES Actividades(id_actividad)
 );
 
--- Tutorias
 DROP TABLE IF EXISTS Tutorias;
 CREATE TABLE Tutorias (
     id_tutoria INT PRIMARY KEY AUTO_INCREMENT,
@@ -115,7 +96,6 @@ CREATE TABLE Tutorias (
     FOREIGN KEY (id_profesor) REFERENCES Profesores(id_profesor)
 );
 
--- Proyectos
 DROP TABLE IF EXISTS Proyectos;
 CREATE TABLE Proyectos (
     id_proyecto INT PRIMARY KEY AUTO_INCREMENT,
@@ -130,7 +110,6 @@ CREATE TABLE Proyectos (
     FOREIGN KEY (evaluador) REFERENCES Profesores(id_profesor)
 );
 
--- Perfiles Talento
 DROP TABLE IF EXISTS PerfilesTalento;
 CREATE TABLE PerfilesTalento (
     id_perfil INT PRIMARY KEY AUTO_INCREMENT,
@@ -143,7 +122,6 @@ CREATE TABLE PerfilesTalento (
     FOREIGN KEY (id_estudiante) REFERENCES Estudiantes(id_estudiante)
 );
 
--- Retroalimentaciones
 DROP TABLE IF EXISTS Retroalimentaciones;
 CREATE TABLE Retroalimentaciones (
     id_feedback INT PRIMARY KEY AUTO_INCREMENT,
@@ -155,7 +133,6 @@ CREATE TABLE Retroalimentaciones (
     FOREIGN KEY (id_estudiante) REFERENCES Estudiantes(id_estudiante)
 );
 
--- Recomendaciones
 DROP TABLE IF EXISTS Recomendaciones;
 CREATE TABLE Recomendaciones (
     id_recomendacion INT PRIMARY KEY AUTO_INCREMENT,
