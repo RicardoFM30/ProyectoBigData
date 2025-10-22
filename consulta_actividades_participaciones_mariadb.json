@@ -1,0 +1,32 @@
+[
+    {
+        "id_actividad": 1,
+        "actividad": "Va",
+        "total_participantes": 3,
+        "horas_promedio": 7.63
+    },
+    {
+        "id_actividad": 2,
+        "actividad": "Deja",
+        "total_participantes": 1,
+        "horas_promedio": 16.43
+    },
+    {
+        "id_actividad": 3,
+        "actividad": "Aumento",
+        "total_participantes": 3,
+        "horas_promedio": 12.603333
+    },
+    {
+        "id_actividad": 4,
+        "actividad": "Miembros",
+        "total_participantes": 0,
+        "horas_promedio": null
+    },
+    {
+        "id_actividad": 5,
+        "actividad": "Cada",
+        "total_participantes": 3,
+        "horas_promedio": 9.22
+    }
+]

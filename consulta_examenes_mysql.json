@@ -1,0 +1,62 @@
+[
+    {
+        "id_estudiante": 1,
+        "nombre_completo": "León Figueras",
+        "total_examenes": 0,
+        "promedio_examenes": null
+    },
+    {
+        "id_estudiante": 2,
+        "nombre_completo": "Alcides Belda",
+        "total_examenes": 2,
+        "promedio_examenes": 6.875
+    },
+    {
+        "id_estudiante": 3,
+        "nombre_completo": "Silvio Duarte",
+        "total_examenes": 1,
+        "promedio_examenes": 9.44
+    },
+    {
+        "id_estudiante": 4,
+        "nombre_completo": "Pastora Boada",
+        "total_examenes": 0,
+        "promedio_examenes": null
+    },
+    {
+        "id_estudiante": 5,
+        "nombre_completo": "Ariel Manrique",
+        "total_examenes": 2,
+        "promedio_examenes": 4.34
+    },
+    {
+        "id_estudiante": 6,
+        "nombre_completo": "Prudencio Álvarez",
+        "total_examenes": 3,
+        "promedio_examenes": 5.29
+    },
+    {
+        "id_estudiante": 7,
+        "nombre_completo": "Leoncio Yuste",
+        "total_examenes": 3,
+        "promedio_examenes": 2.316667
+    },
+    {
+        "id_estudiante": 8,
+        "nombre_completo": "Inmaculada Frutos",
+        "total_examenes": 4,
+        "promedio_examenes": 5.235
+    },
+    {
+        "id_estudiante": 9,
+        "nombre_completo": "Carolina Andreu",
+        "total_examenes": 2,
+        "promedio_examenes": 8.845
+    },
+    {
+        "id_estudiante": 10,
+        "nombre_completo": "Loreto Gargallo",
+        "total_examenes": 3,
+        "promedio_examenes": 5.42
+    }
+]

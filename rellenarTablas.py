@@ -182,27 +182,6 @@ def insertar_proyectos(cursor, cantidad=5):
             faker.word() + ".pdf"
         ))
 
-def insertar_perfiles(cursor):
-    # Obtener todos los IDs de estudiantes
-    cursor.execute("SELECT id_estudiante FROM Estudiantes")
-    estudiantes = [row[0] for row in cursor.fetchall()]
-
-    for id_estudiante in estudiantes:
-        cursor.execute("""
-            INSERT INTO PerfilesTalento (
-                id_estudiante, promedio_general, habilidades_destacadas,
-                intereses, fortalezas, recomendaciones_generadas
-            )
-            VALUES (%s, %s, %s, %s, %s, %s)
-        """, (
-            id_estudiante,
-            round(random.uniform(0,10),2),
-            faker.text(max_nb_chars=50),
-            faker.text(max_nb_chars=50),
-            faker.text(max_nb_chars=50),
-            faker.text(max_nb_chars=50)
-        ))
-
 
 def insertar_retroalimentaciones(cursor, cantidad=10):
     for _ in range(cantidad):
@@ -243,7 +222,6 @@ def poblar(cursor, conexion):
     insertar_participaciones(cursor)
     insertar_tutorias(cursor)
     insertar_proyectos(cursor)
-    insertar_perfiles(cursor)
     insertar_retroalimentaciones(cursor)
     insertar_recomendaciones(cursor)
     conexion.commit()
